@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: ABCFavoritMono;
+    src: url(otf/ABCFavoritMonoEdu-Regular.otf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: ABCFavoritMono;
+    src: url(otf/ABCFavoritMonoEdu-Bold.otf);
+    font-weight: bold;
+}
+
+body {
+    background-color: rgb(255, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    color: rgb(4, 0, 255);
+    font-family: ABCFavoritMono, monospace;
+    font-size: 5rem;
+}
+
+header {
+    height: 100px;
+}
+
+section {
+    background-color: rgb(4, 0, 255);
+    color: rgb(255, 251, 0);
+    font-size: 2rem;
+}
+
+.colones {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.colone {
+    flex: 1;
+}
+
+#scroll {
+    background-color: green;
+    flex: 1;
+}
+
+#mamifere {
+    max-width: 100%;
+    height: 600px;
+}

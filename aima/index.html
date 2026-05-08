@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>LAZY ZINE — Aima</title>
+    <style>
+        #site-nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.85);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0.4rem 1rem;
+            font-family: monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+        }
+        #site-nav a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+        #site-nav a:hover { opacity: 1; }
+        #site-nav a.current { opacity: 1; border-bottom: 1px solid #fff; }
+        body { padding-top: 1.8rem !important; }
+    </style>
+</head>
+<body>
+    <nav id="site-nav">
+        <a href="../index.html">← Index</a>
+        <a href="../aima/" class="current">Lazy Zine</a>
+        <a href="../layla/">Paresseux</a>
+        <a href="../matthias/">Rompich</a>
+        <a href="../alix/">Limace</a>
+        <a href="../maximus/">La Big Flemme</a>
+    </nav>
+
+    <header>
+        <h1>LAZY ZINE </h1>
+        <div class="sous-titre-wrapper">
+            <p class="sous-titre">welcome</p>
+        </div>
+    </header>
+
+    <div class="hero">
+        <img src="images/shrekcute.jpg" alt="lazytoilette" onclick="document.getElementById('pet').play()" style="cursor:pointer;">
+        <audio id="pet" src="son/prout.mp3"></audio>
+    </div>
+
+    <div class="gif-papier">
+        <img src="images/giphy.gif" alt="papier toilette">
+    </div>
+
+    <section class="colonnes">
+        <section class="colonne pipi">
+            <p class="gros-mot">pipi</p>
+            <p class="petit">le moment de gloire quotidien</p>
+        </section>
+        <a class="colonne scroll" href="https://youtu.be/LVmbDob04zo?si=-hb6hjMpRzJMsyqm" target="_blank">
+            <p class="gros-mot">scroll</p>
+            <div class="fleches"></div>
+            <p class="petit">⬆️ clique ⬆️</p>
+        </a>
+        <section class="colonne caca">
+            <p class="gros-mot">caca</p>
+            <p class="petit">l'heure dorée de la réflexion</p>
+        </section>
+    </section>
+    <div id="p5"></div>
+    <footer>
+        <p>Tu sais ce que tu fais là.</p>
+    </footer>
+    <script src="sketch.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: futura;
+    src: url(Futura.ttc);
+}
+
+body {
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: futura;
+    letter-spacing: 1rem;
+}
+
+header {
+    height: 30px;
+}
+
+.tete {
+    padding-left: 30rem;
+}
+
+section {
+    background-color: slategrey;
+}
+
+.colones {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.colone {
+    flex: 1;
+}
+
+.contenu1 {
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+}
+
+#p5 {
+    position: relative;
+    width : 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+/*
+#lol {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+*/
+
+#scroll {
+    padding-left: 400px;
+    padding-top: 100px;
+    height: 200px;
+    width: auto;
+    overflow-y: auto;
+}

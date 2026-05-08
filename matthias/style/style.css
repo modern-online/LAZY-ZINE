@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Geneva;
+    src: url(Geneva.ttf);
+    font-weight: regular;
+}
+
+body {
+    background-color: greenyellow;
+    display: flex;
+    flex-direction: column; 
+    min-height: 100vh;
+    font-family: Geneva;
+    letter-spacing: 1rem;
+}
+
+header{
+    height: 100px;
+}
+
+section{
+    display: flex;
+    background-color: darkviolet;
+    flex: 1;
+    
+}
+
+.colones{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+}
+
+.colone{
+flex: 1;
+}
+
+
+#scroll{
+    background-color: rgb(203, 203, 203);
+    font-size: 2rem;
+    letter-spacing:0cap
+}
+
+#que {
+    padding-left: 20%;
+    padding-top: 20%;
+    position: fixed;
+    height: 30%;
+    width:auto;
+    z-index: 1;
+}
+
+#cercle {
+    padding-left: 60%;
+    padding-top: 20%;
+    position: fixed;
+    height: 30%;
+    size: 10%;
+    width:auto;
+    z-index: 2;
+}
+
+#cercle2 {
+    padding-left: 35%;
+    padding-top: 30%;
+    position: fixed;
+    height: 30%;
+    size: 5%;
+    z-index: 0;
+}
+
+#cercle3 {
+    padding-left: 10%;
+    padding-top: 5%;
+    position: fixed;
+    height: 30%;
+    size: 5%;
+    z-index: 0;
+}
+
+#ticket1 {
+
+  padding-left: 7%;
+    padding-top: 40%;
+    position: fixed;
+    height: 30%;
+    size: 15%;
+    z-index: 0;
+    
+}

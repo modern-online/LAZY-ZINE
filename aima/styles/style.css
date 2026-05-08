@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Apotheotica;
+    src: url(Aphotheotica.ttf);
+}
+
+body {
+    background-color: rgb(51, 24, 4);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: rgb(230, 190, 91);
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #2fff00;
+    letter-spacing: 0.5rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+header .sous-titre {
+    font-size: 1.2rem;
+    color: rgb(230, 190, 91);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+    font-family: Apotheotica, serif;
+    text-align: center;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    opacity: 0.75;
+}
+
+.gif-papier {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(51, 24, 4);
+    padding: 2rem;
+}
+
+.gif-papier img {
+    height: 113px;
+    width: auto;
+}
+
+.hero-texte {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(51, 24, 4, 0.6);
+    padding: 0.5rem 1rem;
+}
+
+.colonnes {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.colonne {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-align: center;
+    gap: 1rem;
+}
+
+.gros-mot {
+    font-family: Apotheotica, serif;
+    font-size: 3rem;
+}
+
+.petit {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-family: Arial, sans-serif;
+}
+
+.fleches {
+    display: flex;
+    gap: 2rem;
+    font-size: 2rem;
+}
+
+.pipi {
+    background-color: rgb(230, 190, 91);
+    color: rgb(51, 24, 4);
+}
+
+.caca {
+    background-color: rgb(51, 24, 4);
+    color: rgb(230, 190, 91);
+    border: 2px solid rgb(230, 190, 91);
+}
+
+.scroll {
+    background-color: #ff00bb;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.scroll:hover {
+    background-color: rgb(51, 24, 4);
+    color: #ff00bb;
+    border: 2px solid #ff00bb;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-top: 2px solid #ff00bb;
+    background-color: burlywood;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+footer p {
+    color: #2fff00;
+}
+
+.gif-footer {
+    height: 113px;
+    width: auto;
+}
+
+#p5 {
+    max-width: 100%;
+    height: auto;
+}
+
+.sous-titre-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gif-welcome {
+    height: 13px;
+    width: auto;
+}

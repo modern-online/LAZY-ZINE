@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAZY ZINE</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        @font-face {
+            font-family: Diskus;
+            src: url(DiskusBQRegular.otf);
+        }
+
+        body {
+            background: #ffff00;
+            font-family: Diskus, "Comic Sans MS", cursive;
+            display: grid;
+            grid-template-rows: auto auto 1fr auto;
+            border: 8px solid #000;
+        }
+
+        header {
+            background: #000;
+            color: #ffff00;
+            text-align: center;
+            padding: 0.4rem;
+            font-size: clamp(2.5rem, 9vw, 6rem);
+            font-weight: bold;
+            letter-spacing: 0.1em;
+            border-bottom: 8px solid #000;
+            overflow: hidden;
+        }
+
+        .ticker {
+            background: #ff00ff;
+            color: #fff;
+            font-size: 1rem;
+            padding: 0.3rem 1rem;
+            border-bottom: 4px solid #000;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-5px); }
+        }
+        @keyframes skew {
+            0%   { transform: skewX(-10deg); }
+            50%  { transform: skewX(10deg); }
+            100% { transform: skewX(-10deg); }
+        }
+
+        .blink  { display: inline-block; animation: blink  0.7s step-end infinite; }
+        .bounce { display: inline-block; animation: bounce 0.6s ease-in-out infinite; }
+        .skew   { display: inline-block; animation: skew   2.4s ease-in-out infinite; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .grid a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 4px solid #000;
+            font-size: clamp(1.8rem, 6vw, 4.5rem);
+            font-weight: bold;
+            text-align: center;
+            padding: 1rem;
+            line-height: 1.2;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* rotating background image layer */
+        .grid a::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* static colour overlay layer */
+        .grid a::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
+
+        /* text content above both layers */
+        .grid a > * { position: relative; z-index: 2; }
+
+        .grid a b.t {
+            display: inline-block;
+            font-weight: inherit;
+        }
+
+        .grid a:hover b.t {
+            animation: skew 2.4s ease-in-out infinite;
+        }
+
+        .grid a span {
+            font-size: 1.05rem;
+            font-family: "Courier New", monospace;
+            text-decoration: underline;
+            margin-top: 0.4rem;
+            font-weight: normal;
+        }
+
+        @keyframes lazy-zoom {
+            from { transform: scale(1); }
+            to   { transform: scale(1.4); }
+        }
+
+        .c1 { color: #fff; }
+        .c1::before { background-image: url(aima/images/shrekcute.jpg); }
+        .c1::after  { background: rgba(255, 0, 0, 0.55); }
+        .c1:hover::before { animation: lazy-zoom 4s ease-out forwards; }
+
+        .c2 { color: #fff; }
+        .c2::before { background-image: url(layla/images/paresseux.png); }
+        .c2::after  { background: rgba(0, 0, 200, 0.5); }
+        .c2:hover::before { animation: lazy-zoom 5s ease-out forwards; }
+
+        .c3 { color: #fff; }
+        .c3::before { background-image: url(matthias/images/Anim_ticket_1.gif); }
+        .c3::after  { background: rgba(0, 180, 0, 0.45); }
+        .c3:hover::before { animation: lazy-zoom 3.5s ease-out forwards; }
+
+        .c4 { color: #fff; }
+        .c4::before { background-image: url(alix/images/b5890ecde42a4f95ab9127c6271eb50f.png); }
+        .c4::after  { background: rgba(255, 80, 0, 0.55); }
+        .c4:hover::before { animation: lazy-zoom 4.5s ease-out forwards; }
+
+        .c5 { color: #fff; grid-column: 1 / -1; }
+        .c5::before { background-image: url(maximus/images/moussa.jpg); }
+        .c5::after  { background: rgba(80, 0, 140, 0.55); }
+        .c5:hover::before { animation: lazy-zoom 4s ease-out forwards; }
+
+        footer {
+            background: #000;
+            color: #ffff00;
+            font-family: "Courier New", monospace;
+            font-size: 0.65rem;
+            text-align: center;
+            padding: 0.3rem;
+            border-top: 4px solid #000;
+            letter-spacing: 0.15em;
+        }
+    </style>
+</head>
+<body>
+
+    <header><span class="skew">☆ Lazy Zine ☆</span></header>
+
+    <div class="ticker">
+        <span class="bounce">Random Noise 2025–26</span>
+        <span>HEAD Genève</span>
+        <span class="blink">Pool Numérique</span>
+    </div>
+
+    <div class="grid">
+        <a href="aima/" class="c1">
+            <b class="t">Pipi-Scroll-Caca</b>
+            <span>— Aima —</span>
+        </a>
+        <a href="layla/" class="c2">
+            <b class="t">Paresseux</b>
+            <span>— Layla —</span>
+        </a>
+        <a href="matthias/" class="c3">
+            <b class="t">Rompich</b>
+            <span>— Matthias —</span>
+        </a>
+        <a href="alix/" class="c4">
+            <b class="t">Limace</b>
+            <span>— Alix —</span>
+        </a>
+        <a href="maximus/" class="c5">
+            <b class="t">La Big Flemme</b>
+            <span>— Maximus —</span>
+        </a>
+    </div>
+
+    <footer>HEAD — HAUTE ÉCOLE D'ART ET DE DESIGN — RANDOM NOISE — 2025–26</footer>
+
+</body>
+</html>
