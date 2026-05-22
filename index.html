@@ -26,7 +26,7 @@
         }
 
         header {
-            background: #000;
+            background: #ff0000;
             color: #ffff00;
             text-align: center;
             padding: 0.4rem;
@@ -64,7 +64,7 @@
 
         .blink  { display: inline-block; animation: blink  0.7s step-end infinite; }
         .bounce { display: inline-block; animation: bounce 0.6s ease-in-out infinite; }
-        .skew   { display: inline-block; animation: skew   2.4s ease-in-out infinite; }
+        .skew   { display: inline-block; animation: skew   2.4s ease-in-out infinite; color: #ff0000; text-shadow: 0 0 0.2rem #ffff00; }
 
         .grid {
             display: grid;
@@ -152,10 +152,15 @@
         .c4::after  { background: rgba(255, 80, 0, 0.55); }
         .c4:hover::before { animation: lazy-zoom 4.5s ease-out forwards; }
 
-        .c5 { color: #fff; grid-column: 1 / -1; }
+        .c5 { color: #fff; }
         .c5::before { background-image: url(maximus/images/moussa.jpg); }
         .c5::after  { background: rgba(80, 0, 140, 0.55); }
         .c5:hover::before { animation: lazy-zoom 4s ease-out forwards; }
+
+        .c6 { color: #fff; }
+        .c6::before { background-image: url(zoe/images/ciel.jpg); }
+        .c6::after  { background: rgba(0, 160, 160, 0.55); }
+        .c6:hover::before { animation: lazy-zoom 4.5s ease-out forwards; }
 
         footer {
             background: #000;
@@ -199,6 +204,10 @@
         <a href="maximus/" class="c5">
             <b class="t">La Big Flemme</b>
             <span>— Maximus —</span>
+        </a>
+        <a href="zoe/" class="c6">
+            <b class="t">Lazyyyy</b>
+            <span>— Zoe —</span>
         </a>
     </div>
 
